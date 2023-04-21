@@ -29,15 +29,18 @@
             "styles": [
               "src/styles.css",
               "src/assets/bootstrap/css/bootstrap.min.css",
-              "src/assets/fonts/fontawesome-all.min.css"
+              "src/assets/fonts/fontawesome-all.min.css",
+              "src/assets/bootstrap/css/bootstrap-select.min.css",
+              "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
             ],
             "scripts": [
               "src/assets/js/script.min.js",
               "src/assets/js/chart.min.js",
               "src/assets/bootstrap/js/bootstrap.min.js",
               "src/assets/js/theme.js",
-              "node_modules/jquery/dist/jquery.min.js"
-          
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js",
+              "node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"
             ]
           },
           "configurations": {
