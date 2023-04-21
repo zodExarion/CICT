@@ -16,6 +16,8 @@ import { FacultyScheduleComponent } from './pages/faculty-schedule/faculty-sched
 import { KeyInventoryComponent } from './pages/key-inventory/key-inventory.component';
 import { KeyHistoryComponent } from './pages/key-history/key-history.component';
 
+import { DataTablesModule} from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { KeyHistoryComponent } from './pages/key-history/key-history.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

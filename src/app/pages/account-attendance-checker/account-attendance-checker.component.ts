@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./account-attendance-checker.component.css']
 })
 export class AccountAttendanceCheckerComponent {
+  isPasswordVisible = false;
 
+  togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password') as HTMLInputElement;
+    this.isPasswordVisible = !this.isPasswordVisible;
+    passwordInput.type = this.isPasswordVisible ? 'text' : 'password';
+  }
 }
