@@ -1,1 +1,78 @@
-<p>faculty-schedule works!</p>
+<section class="position-relative py-4 py-xl-5">
+  <div class="container position-relative">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-5">
+        <div class="card">
+          <div class="card-body  p-sm-5">
+            <h2 class="font-weight-bold mb-3 text-center">Create Faculty Schedule</h2>
+            <form method="post" id="add-checker">
+              <div class="mb-3"><input class="form-control" type="text" name="subjectName" placeholder="Subject Name"
+                  required>
+              </div>
+              <div class="mb-3"><input class="form-control" type="text" name="sectionName" placeholder="Section Name"
+                  required></div>
+              <div class="mb-3"><input class="form-control" type="text" name="facultyName" placeholder="Faculty Name"
+                  required></div>
+              <div class="mb-3"><input class="form-control" type="text" name="roomName" placeholder="Room Name"
+                  required>
+              </div>
+              <div class="mb-3"><select class="form-control" name="day">
+                  <option value="" selected disabled>Select Day</option>
+                  <option value="Purok 1">Monday</option>
+                  <option value="Purok 2">Tuesday</option>
+                  <option value="Purok 3">Wednesday</option>
+                  <option value="Purok 4">Thursday</option>
+                  <option value="Purok 5">Friday</option>
+                  <option value="Purok 6">Saturday</option>
+                  <option value="Purok 8">Sunday</option>
+
+                </select></div>
+              <div class="mb-3">
+                <label class="" for="Time Start">Time Start</label><input class="form-control" type="time"
+                  name="timeStart" placeholder="Time Start">
+              </div>
+              <div class="mb-3">
+                <label class="" for="timeEnd">Time End</label><input class="form-control" type="time" name="timeEnd"
+                  placeholder="Time Start">
+              </div>
+              <div><button class="btn btn-primary d-block w-100" name="insert" type="submit">Create </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card shadow">
+          <div class="card-header py-2">
+            <p class="lead  m-0"><strong>Faculty Schedule</strong></p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive table mb-0 pt-3 pr-2">
+              <table datatable class="table table-striped table-sm my-0 mydatatable">
+                <thead>
+                  <tr class="text-nowrap">
+                    <th>Subject Name</th>
+                    <th>Section Name</th>
+                    <th>Faculty Name</th>
+                    <th>Room Name</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr class="text-nowrap">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
