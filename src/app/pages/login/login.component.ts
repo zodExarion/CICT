@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public form={
+    email : null,
+    password : null
+  }
+  
+  loggedIn = false;
+  user: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  ngOnInit():void {
+    // Check if the user is already logged in
+    
   }
 
+  submitLogin():void {
+    console.log(this.form);
+}
 }

@@ -5,21 +5,21 @@
         <div class="card">
           <div class="card-body text-center p-sm-5">
             <h2 class="font-weight-bold mb-3">Create Faculty Account</h2>
-            <form method="post" id="add-faculty">
-              <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" required>
+            <form method="post" id="add-faculty" #regForm="ngForm" (ngSubmit)="submitRegFaculty()">
+              <div class="mb-3"><input [(ngModel)]="form.email"  class="form-control" type="email" name="email" placeholder="Email" >
               </div>
-              <div class="mb-3"><input class="form-control" type="text" name="firstName" placeholder="First Name"
+              <div class="mb-3"><input [(ngModel)]="form.firstName"  class="form-control" type="text" name="firstName" placeholder="First Name"
                   required></div>
-              <div class="mb-3"><input class="form-control" type="text" name="middleName" placeholder="Middle Name"
+              <div class="mb-3"><input [(ngModel)]="form.middleName" class="form-control" type="text" name="middleName" placeholder="Middle Name"
                   required></div>
-              <div class="mb-3"><input class="form-control" type="text" name="surName" placeholder="Last Name" required>
+              <div class="mb-3"><input [(ngModel)]="form.lastName" class="form-control" type="text" name="lastName" placeholder="Last Name" >
               </div>
-              <div class="mb-3"><input class="form-control" type="text" name="employeeId" placeholder="Employee ID" required>
+              <div class="mb-3"><input [(ngModel)]="form.employeeId" class="form-control" type="text" name="employeeId" placeholder="Employee ID" >
               </div>
-              <div class="mb-3"><input class="form-control" type="number" name="contactNumber"
+              <div class="mb-3"><input [(ngModel)]="form.contactNumber" class="form-control" type="number" name="contactNumber"
                   placeholder="Contact Number">
                 </div>
-                <div class="mb-3"><input class="form-control" type="text" name="courseProgram"
+                <div class="mb-3"><input [(ngModel)]="form.courseProgram" class="form-control" type="text" name="courseProgram"
                     placeholder="Course Program">
                   </div>
               
@@ -29,7 +29,7 @@
                     <p class="text-danger pl-3 text-left " style="font-size: 12px;">Note: password must contain one(1)
                       Uppercase letter, one(1) lowercase letter and one(1) number. It must be atleast 8 characters.</p>
                   </b>
-                  <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password"
+                  <input [(ngModel)]="form.password" type="password"  id="password"
                     class="form-control password" data-toggle="password" placeholder="password" name="password" required>
                   <div class="input-group-append d-flex">
                     <span class="input-group-text eye-icon" (click)="togglePasswordVisibility()">

@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { AccountFacultyComponent } from './pages/account-faculty/account-faculty.component';
-import { AccountAttendanceCheckerComponent } from './pages/account-attendance-checker/account-attendance-checker.component';
-import { AttendanceRecordComponent } from './pages/attendance-record/attendance-record.component';
-import { FacultyScheduleComponent } from './pages/faculty-schedule/faculty-schedule.component';
-import { KeyInventoryComponent } from './pages/key-inventory/key-inventory.component';
-import { KeyHistoryComponent } from './pages/key-history/key-history.component';
+import { AccountFacultyComponent } from './pages/admin/account-faculty/account-faculty.component';
+import { AccountAttendanceCheckerComponent } from './pages/admin/account-attendance-checker/account-attendance-checker.component';
+import { AttendanceRecordComponent } from './pages/admin/attendance-record/attendance-record.component';
+import { FacultyScheduleComponent } from './pages/admin/faculty-schedule/faculty-schedule.component';
+import { KeyInventoryComponent } from './pages/admin/key-inventory/key-inventory.component';
+import { KeyHistoryComponent } from './pages/admin/key-history/key-history.component';
+import { ScheduleAttendanceComponent } from './pages/checker/schedule-attendance/schedule-attendance.component';
+import { CheckerKeyInventoryComponent } from './pages/checker/checker-key-inventory/checker-key-inventory.component';
+import { LayoutCheckerComponent } from './components/layout-checker/layout-checker.component';
+
 
 
 const routes: Routes = [
@@ -17,61 +21,77 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'dashboard',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: DashboardComponent }
+      { path: 'dashboard', component: DashboardComponent }
     ]
 
   },
   {
-    path: 'account-faculty',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: AccountFacultyComponent }
+      { path: 'account-faculty', component: AccountFacultyComponent }
     ]
 
   },
   {
-    path: 'account-attendance-checker',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: AccountAttendanceCheckerComponent }
+      { path: 'account-attendance-checker', component: AccountAttendanceCheckerComponent }
     ]
 
   },
   {
-    path: 'attendance-record',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: AttendanceRecordComponent }
+      { path: 'attendance-record', component: AttendanceRecordComponent }
     ]
 
   },
   {
-    path: 'faculty-schedule',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: FacultyScheduleComponent }
+      { path: 'faculty-schedule', component: FacultyScheduleComponent }
     ]
 
   },
   {
-    path: 'key-inventory',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: KeyInventoryComponent }
+      { path: 'key-inventory', component: KeyInventoryComponent }
     ]
 
   },
   {
-    path: 'key-history',
+    path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: KeyHistoryComponent }
+      { path: 'key-history', component: KeyHistoryComponent }
     ]
 
-  }
+  },
+  {
+    path: 'checker',
+    component: LayoutCheckerComponent,
+    children: [
+      { path: 'schedule-attendance', component: ScheduleAttendanceComponent }
+    ]
+
+  },
+  {
+    path: 'checker',
+    component: LayoutCheckerComponent,
+    children: [
+      { path: 'checker-key-inventory', component: CheckerKeyInventoryComponent }
+    ]
+
+  },
   
 
 ];

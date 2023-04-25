@@ -66,12 +66,11 @@
                 </thead>
                 <tbody>
 
-                  <tr class="text-nowrap">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  <tr *ngFor="let cart of cartData">
+                    <td>{{ cart.product.name }}</td>
+                    <td>{{ cart.product.description }}</td>
+                    <td>{{ cart.product.price }}</td>
+                    <td>{{ cart.quantity }}</td>
 
                 </tbody>
               </table>
