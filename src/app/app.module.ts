@@ -26,7 +26,11 @@ import { LayoutCheckerComponent } from './components/layout-checker/layout-check
 // import { HeaderDropdownComponent } from './pages/checker/header-dropdown/header-dropdown.component';
 import { AdminHeaderDropdownComponent } from './pages/admin/admin-header-dropdown/admin-header-dropdown.component';
 // import { CheckerHeaderDropdownComponent } from './pages/admin/checker-header-dropdown/checker-header-dropdown.component';
-import { FacultyCheckerHeaderDropdownComponent } from './pages/faculty/faculty-checker-header-dropdown/faculty-checker-header-dropdown.component';
+// import { FacultyCheckerHeaderDropdownComponent } from './pages/faculty/faculty-checker-header-dropdown/faculty-checker-header-dropdown.component';
+import { CheckerHeaderDropdownComponent } from './pages/checker/checker-header-dropdown/checker-header-dropdown.component';
+import { FacultyHeaderDropdownComponent } from './pages/faculty/faculty-header-dropdown/faculty-header-dropdown.component';
+import { KeyInventoryBoardComponent } from './pages/faculty/key-inventory-board/key-inventory-board.component';
+import { AttendanceSummaryComponent } from './pages/faculty/attendance-summary/attendance-summary.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { FacultyCheckerHeaderDropdownComponent } from './pages/faculty/faculty-c
     // HeaderDropdownComponent,
     AdminHeaderDropdownComponent,
     // CheckerHeaderDropdownComponent,
-    FacultyCheckerHeaderDropdownComponent
+    // FacultyCheckerHeaderDropdownComponent,
+    CheckerHeaderDropdownComponent,
+    FacultyHeaderDropdownComponent,
+    KeyInventoryBoardComponent,
+    AttendanceSummaryComponent
 
   ],
   imports: [
